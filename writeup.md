@@ -18,7 +18,7 @@
 
 ## Reflection
 
-### 1. Pipeline description.
+### 1. Pipeline description
 
 My pipeline consisted of 5 steps:
  - First, I converted the images to grayscale.
