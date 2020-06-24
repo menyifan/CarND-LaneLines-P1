@@ -30,7 +30,7 @@ My pipeline consisted of 5 steps:
  - Then I applied Hough Transform to generate lines which were later drawn on the image with edges to return an image with lines.
  - Finally, I combined image with lines and original image under a proper weighted ratio to get the finally image I want.
  
- ![Grayscale Image][image2]
+ ![Final Image][image2]
  
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by calculating and comparing the slope of each lines generate by Hough Transform. If the slope of the line is within the left lane's slope range, then it is appended to left lane lines. If the slope of the line is within the right lane's slope range, then it is appended to right lane lines. If the line is neither left lane line nor right lane line, then it is dropped. After collecting all left and right lane lines, I averaged the coordinates of all lines in either left or right lane line set and generated one single line for each set. The result of this is two sets of first order polynomial coefficients (m and b), one for left lane and one for right lane. I used these coefficients together with the desired end points (fixed y coordinates) to draw two solid lines on the original image. See definition of function draw_lines() for details.
 
